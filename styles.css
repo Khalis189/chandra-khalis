@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Aniyah&family=Cormorant+Garamond&family=Dancing+Script&family=Great+Vibes&family=Allura&display=swap');
-@import url(https://db.onlinewebfonts.com/c/ae0397645156f4fe34e75175ca0e7652?family=Aniyah);
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Dancing+Script&family=Great+Vibes&family=Allura&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
 
 body {
     font-family: 'Great Vibes', cursive;
@@ -47,20 +47,6 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
-}
-.flower.left-top {
-    top: 10px;
-    right: 10px;
-    transform: rotate(180deg);
-    background-image: url('flower-left.png');
-    animation: fadeInFlower 2s forwards;
-}
-.flower.right-top {
-    top: 10px;
-    left: 10px;
-    transform: rotate(180deg);
-    background-image: url('flower-right.png');
-    animation: fadeInFlower 2s forwards;
 }
 .flower.left-bottom {
     bottom: 10px;
@@ -151,8 +137,9 @@ body {
     opacity: 1;
 }
 .section h2 {
-    font-family: 'Allura', cursive; /* Font diubah menjadi Allura */
-    font-size: 3.5em;
+    font-family: 'Playwrite AU SA', serif;
+    font-size: 2.5em;
+    font-weight: 300;
     margin-bottom: 20px;
 }
 .section p {
@@ -167,47 +154,42 @@ body {
     margin-bottom: 20px;
 }
 .section h3 {
-    font-family: 'Allura', cursive; /* Font diubah menjadi Allura */
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-family: 'Playwrite AU SA', serif;
+    font-size: 1.8em;
+    font-weight: 300;
+    margin-bottom: 5px;
 }
-.date {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5em;
-    background-color: #fff;
-    color: rgba(140, 115, 87, 255); /* Warna font diubah */
-    padding: 10px 20px;
-    border-radius: 10px;
-    display: inline-block;
-    border: 2px solid #f8e8e8;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    background-image: url('date-background.png');
-    background-size: cover;
-}
-.date:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.date-image {
+    width: 300px; /* Sesuaikan ukuran gambar */
+    height: auto;
+    border-radius: 15px;
+    margin-top: 20px;
 }
 @media (max-width: 768px) {
     .section {
         padding: 30px;
     }
-    .section p, .section .date {
+    .section p, .section .date-image {
         font-size: 1.2em;
     }
     .section img {
         width: 250px;
+    }
+    .date-image {
+        width: 250px; /* Sesuaikan ukuran gambar */
     }
 }
 @media (max-width: 480px) {
     .section {
         padding: 20px;
     }
-    .section p, .section .date {
+    .section p, .section .date-image {
         font-size: 1em;
     }
     .section img {
         width: 200px;
+    }
+    .date-image {
+        width: 200px; /* Sesuaikan ukuran gambar */
     }
 }

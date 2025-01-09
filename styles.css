@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Dancing+Script&family=Great+Vibes&family=Allura&display=swap');
+
+body {
+    font-family: 'Great Vibes', cursive;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    color: rgba(140, 115, 87, 255); /* Warna font diubah */
+}
+.header {
+    padding: 50px;
+    color: rgba(140, 115, 87, 255); /* Warna font diubah */
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 1s;
+}
+.header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    animation: fadeIn 2s;
+}
+.header p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    animation: fadeIn 3s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.header h1:hover, .header p:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.flower {
+    position: fixed;
+    width: 200px; /* Ukuran diperbesar dua kali lipat */
+    height: 200px; /* Ukuran diperbesar dua kali lipat */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+.flower.left-bottom {
+    bottom: 10px;
+    left: 10px;
+    background-image: url('flower-left.png');
+    animation: fadeInFlower 2s forwards;
+}
+.flower.right-bottom {
+    bottom: 10px;
+    right: 10px;
+    background-image: url('flower-right.png');
+    animation: fadeInFlower 2s forwards;
+}
+@keyframes fadeInFlower {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 30px;
+    }
+    .header h1 {
+        font-size: 2.5em;
+    }
+    .header p {
+        font-size: 1.2em;
+    }
+    .flower {
+        width: 160px; /* Ukuran diperbesar dua kali lipat */
+        height: 160px; /* Ukuran diperbesar dua kali lipat */
+        animation-duration: 3s;
+    }
+    .section h2 {
+        font-size: 2em; /* Ukuran font diubah untuk layar kecil */
+    }
+    .section h3 {
+        font-size: 1.8em; /* Ukuran font diubah untuk layar kecil */
+    }
+}
+@media (max-width: 678px) {
+    .section h2 {
+        font-size: 1.8em; /* Ukuran font diubah untuk layar lebih kecil */
+    }
+    .section h3 {
+        font-size: 1.6em; /* Ukuran font diubah untuk layar lebih kecil */
+    }
+}
+@media (max-width: 480px) {
+    .header {
+        padding: 20px;
+    }
+    .header h1 {
+        font-size: 2em;
+    }
+    .header p {
+        font-size: 1em;
+    }
+    .flower {
+        width: 120px; /* Ukuran diperbesar dua kali lipat */
+        height: 120px; /* Ukuran diperbesar dua kali lipat */
+        animation-duration: 3s;
+    }
+    .section h2 {
+        font-size: 1.5em; /* Ukuran font diubah untuk layar lebih kecil */
+    }
+    .section h3 {
+        font-size: 1.3em; /* Ukuran font diubah untuk layar lebih kecil */
+    }
+}
+.section {
+    padding: 50px;
+    color: rgba(140, 115, 87, 255); /* Warna font diubah */
+    animation: slideInUp 2s ease-out forwards;
+    opacity: 0;
+    transition: opacity 1s;
+}
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.section.visible {
+    opacity: 1;
+}
+.section h2 {
+    font-family: 'Allura', cursive; /* Font diubah menjadi Allura */
+    font-size: 4em; /* Ukuran font diperbesar */
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.section img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Jarak antara gambar dan teks diubah */
+}
+.section h3 {
+    font-family: 'Allura', cursive; /* Font diubah menjadi Allura */
+    font-size: 3em; /* Ukuran font diperbesar */
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-top: 10px; /* Jarak antara gambar dan teks diubah */
+}
+.date-image {
+    width: 300px; /* Sesuaikan ukuran gambar */
+    height: auto;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .section {
+        padding: 30px;
+    }
+    .section p, .section .date-image {
+        font-size: 1.2em;
+    }
+    .section img {
+        width: 250px;
+    }
+    .date-image {
+        width: 250px; /* Sesuaikan ukuran gambar */
+    }
+}
+@media (max-width: 480px) {
+    .section {
+        padding: 20px;
+    }
+    .section p, .section .date-image {
+        font-size: 1em;
+    }
+    .section img {
+        width: 200px;
+    }
+    .date-image {
+        width: 200px; /* Sesuaikan ukuran gambar */
+    }
+}

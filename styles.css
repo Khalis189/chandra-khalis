@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Aniyah&family=Cormorant+Garamond&family=Dancing+Script&family=Great+Vibes&family=Allura&display=swap');
+@import url(https://db.onlinewebfonts.com/c/ae0397645156f4fe34e75175ca0e7652?family=Aniyah);
+
+body {
+    font-family: 'Great Vibes', cursive;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    color: rgba(140, 115, 87, 255); /* Warna font diubah */
+}
+.header {
+    padding: 50px;
+    color: rgba(140, 115, 87, 255); /* Warna font diubah */
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 1s;
+}
+.header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    animation: fadeIn 2s;
+}
+.header p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    animation: fadeIn 3s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.header h1:hover, .header p:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.flower {
+    position: fixed;
+    width: 200px; /* Ukuran diperbesar dua kali lipat */
+    height: 200px; /* Ukuran diperbesar dua kali lipat */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+.flower.left-top {
+    top: 10px;
+    right: 10px;
+    transform: rotate(180deg);
+    background-image: url('flower-left.png');
+    animation: fadeInFlower 2s forwards;
+}
+.flower.right-top {
+    top: 10px;
+    left: 10px;
+    transform: rotate(180deg);
+    background-image: url('flower-right.png');
+    animation: fadeInFlower 2s forwards;
+}
+.flower.left-bottom {
+    bottom: 10px;
+    left: 10px;
+    background-image: url('flower-left.png');
+    animation: fadeInFlower 2s forwards;
+}
+.flower.right-bottom {
+    bottom: 10px;
+    right: 10px;
+    background-image: url('flower-right.png');
+    animation: fadeInFlower 2s forwards;
+}
+@keyframes fadeInFlower {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 30px;
+    }
+    .header h1 {
+        font-size: 2.5em;
+    }
+    .header p {
+        font-size: 1.2em;
+    }
+    .flower {
+        width: 160px; /* Ukuran diperbesar dua kali lipat */
+        height: 160px; /* Ukuran diperbesar dua kali lipat */
+        animation-duration: 3s;
+    }
+    .section h2 {
+        font-size: 1.5em; /* Ukuran font diubah untuk layar kecil */
+    }
+    .section h3 {
+        font-size: 1.3em; /* Ukuran font diubah untuk layar kecil */
+    }
+}
+@media (max-width: 678px) {
+    .section h2 {
+        font-size: 1.3em; /* Ukuran font diubah untuk layar lebih kecil */
+    }
+    .section h3 {
+        font-size: 1.1em; /* Ukuran font diubah untuk layar lebih kecil */
+    }
+}
+@media (max-width: 480px) {
+    .header {
+        padding: 20px;
+    }
+    .header h1 {
+        font-size: 2em;
+    }
+    .header p {
+        font-size: 1em;
+    }
+    .flower {
+        width: 120px; /* Ukuran diperbesar dua kali lipat */
+        height: 120px; /* Ukuran diperbesar dua kali lipat */
+        animation-duration: 3s;
+    }
+    .section h2 {
+        font-size: 1.1em; /* Ukuran font diubah untuk layar lebih kecil */
+    }
+    .section h3 {
+        font-size: 1em; /* Ukuran font diubah untuk layar lebih kecil */
+    }
+}
+.section {
+    padding: 50px;
+    color: rgba(140, 115, 87, 255); /* Warna font diubah */
+    animation: slideInUp 2s ease-out forwards;
+    opacity: 0;
+    transition: opacity 1s;
+}
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.section.visible {
+    opacity: 1;
+}
+.section h2 {
+    font-family: 'Allura', cursive; /* Font diubah menjadi Allura */
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+.section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.section img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.section h3 {
+    font-family: 'Allura', cursive; /* Font diubah menjadi Allura */
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    background-color: #fff;
+    color: rgba(140, 115, 87, 255); /* Warna font diubah */
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 2px solid #f8e8e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-image: url('date-background.png');
+    background-size: cover;
+}
+.date:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .section {
+        padding: 30px;
+    }
+    .section p, .section .date {
+        font-size: 1.2em;
+    }
+    .section img {
+        width: 250px;
+    }
+}
+@media (max-width: 480px) {
+    .section {
+        padding: 20px;
+    }
+    .section p, .section .date {
+        font-size: 1em;
+    }
+    .section img {
+        width: 200px;
+    }
+}

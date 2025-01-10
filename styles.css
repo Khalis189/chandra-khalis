@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Dancing+Script&family=Great+Vibes&family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital@1&family=Cormorant+Garamond&family=Dancing+Script&family=Great+Vibes&family=Allura&display=swap');
 
 body {
     font-family: 'Great Vibes', cursive;
@@ -47,9 +47,16 @@ body {
     margin-top: 20px;
 }
 
-.header h1, .place h1 {
+.header h1{
     font-family: 'Dancing Script', cursive;
     font-size: 3em;
+    font-weight: 300;
+    animation: fadeIn 2s;
+}
+
+.place h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
     font-weight: 300;
     animation: fadeIn 2s;
 }
@@ -66,6 +73,71 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s;
 }
+.dresscode {
+    padding: 50px;
+    color: rgba(140, 115, 87, 255);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 1s;
+}
+
+.dresscode h5 {
+    font-family: 'Noto Serif Display', serif;
+    font-style: italic;
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.dresscode img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.dresscode p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.dresscode p.center-text {
+    text-align: center;
+}
+
+.flower.dresscode-left-bottom {
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    left: 10px;
+    background-image: url('flower-left.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.flower.dresscode-right-bottom {
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    right: 10px;
+    background-image: url('flower-right.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .flower {
     position: fixed;
     background-size: cover;
@@ -126,6 +198,15 @@ body {
     margin-top: 20px;
 }
 @media (max-width: 768px) {
+    .dresscode {
+        padding: 30px;
+    }
+    .dresscode h5 {
+        font-size: 1.8em;
+    }
+    .dresscode img {
+        width: 400px;
+    }
     .place img[alt="Location and Time"] {
         max-width: 90%;
         height: auto;
@@ -186,6 +267,15 @@ body {
     }
 }
 @media (max-width: 480px) {
+    .dresscode {
+        padding: 20px;
+    }
+    .dresscode h5 {
+        font-size: 1.5em;
+    }
+    .dresscode img {
+        width: 300px;
+    }
     .place img[alt="Location and Time"] {
         max-width: 90%;
         height: auto;
@@ -193,11 +283,17 @@ body {
     .header, .place {
         padding: 20px;
     }
-    .header h1, .place h1 {
+    .header h1{
         font-size: 2em;
+    }
+    .place h1 {
+        font-size: 3em;
     }
     .header p, .place p {
         font-size: 1em;
+    }
+    .dresscode p {
+        font-size: 1.2em;
     }
     .flower {
         animation-duration: 3s;
@@ -219,6 +315,14 @@ body {
         height: 100px;
     }
     .flower.place-right-bottom {
+        width: 150px;
+        height: 100px;
+    }
+    .flower.dresscode-left-bottom {
+        width: 150px;
+        height: 100px;
+    }
+    .flower.dresscode-right-bottom {
         width: 150px;
         height: 100px;
     }

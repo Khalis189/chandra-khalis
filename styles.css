@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital@1&family=Cormorant+Garamond&family=Dancing+Script&family=Great+Vibes&family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Noto+Serif+Display:ital@1&family=Cormorant+Garamond&family=Dancing+Script&family=Great+Vibes&family=Allura&display=swap');
 
 body {
     font-family: 'Great Vibes', cursive;
@@ -138,6 +138,79 @@ body {
     transition: opacity 1s;
 }
 
+.itinerary {
+    padding: 50px;
+    color: rgba(140, 115, 87, 255);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 1s;
+}
+
+.itinerary h6 {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.itinerary p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    border: 2px solid #9a836b;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box;
+    background-color: #9a836b; /* Warna latar belakang box */
+    color: #f5f5dc; /* Warna tulisan */
+    text-align: start;
+}
+
+.flower.itinerary-left-bottom {
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    left: 10px;
+    background-image: url('flower-left.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.flower.itinerary-right-bottom {
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    right: 10px;
+    background-image: url('flower-right.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.flower.itinerary-right-top {
+    width: 180px;
+    height: 370px;
+    top: 10px;
+    right: 10px;
+    background-image: url('flower-top-right.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .flower {
     position: fixed;
     background-size: cover;
@@ -198,6 +271,16 @@ body {
     margin-top: 20px;
 }
 @media (max-width: 768px) {
+    .itinerary {
+        padding: 30px;
+    }
+    .itinerary h6 {
+        font-size: 2em;
+    }
+    .itinerary p {
+        font-size: 1em;
+        width: 90%;
+    }
     .dresscode {
         padding: 30px;
     }
@@ -267,6 +350,25 @@ body {
     }
 }
 @media (max-width: 480px) {
+    .itinerary {
+        padding: 20px;
+    }
+    .itinerary h6 {
+        font-size: 2em;
+    }
+    .itinerary p {
+        font-size: 0.9em;
+        width: 100%;
+    }
+    .flower.itinerary-left-bottom,
+    .flower.itinerary-right-bottom{
+        width: 150px;
+        height: 100px;
+    }
+    .flower.itinerary-right-top {
+        width: 120px;
+        height: 260px;
+    }
     .dresscode {
         padding: 20px;
     }

@@ -25,13 +25,35 @@ body {
     text-align: left; /* Memastikan teks rata kiri */
 }
 
-.header h1 {
+.place {
+    padding: 50px;
+    color: rgba(140, 115, 87, 255);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Memindahkan tulisan ke tengah */
+    transition: opacity 1s;
+    text-align: center; /* Memastikan teks rata tengah */
+}
+
+.place img[alt="Location and Time"] {
+    width: 100%;
+    max-width: 600px; /* Sesuaikan dengan ukuran maksimum yang diinginkan */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.header h1, .place h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 3em;
     font-weight: 300;
     animation: fadeIn 2s;
 }
-.header p {
+.header p, .place p {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5em;
     animation: fadeIn 3s;
@@ -40,7 +62,7 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-.header h1:hover, .header p:hover {
+.header h1:hover, .header p:hover, .place h1:hover, .place p:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
 }
@@ -49,6 +71,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
+    transition: opacity 1s; /* Menambahkan transisi untuk opacity */
 }
 .flower.left-bottom {
     width: 300px;
@@ -75,18 +98,45 @@ body {
     background-repeat: no-repeat;
     animation: fadeInFlower 2s forwards;
 }
+.flower.place-left-bottom {
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    left: 10px;
+    background-image: url('flower-left.png');
+    opacity: 0;
+    transition: opacity 1s;
+}
+.flower.place-right-bottom {
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    right: 10px;
+    background-image: url('flower-right.png');
+    opacity: 0;
+    transition: opacity 1s;
+}
 @keyframes fadeInFlower {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+.map-place {
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
 @media (max-width: 768px) {
-    .header {
+    .place img[alt="Location and Time"] {
+        max-width: 90%;
+        height: auto;
+    }
+    .header, .place {
         padding: 30px;
     }
-    .header h1 {
+    .header h1, .place h1 {
         font-size: 2.5em;
     }
-    .header p {
+    .header p, .place p {
         font-size: 1.2em;
     }
     .flower {
@@ -104,6 +154,18 @@ body {
         width: 220px;
         height: 450px;
     }
+    .flower.place-left-bottom {
+        width: 280px;
+        height: 220px;
+    }
+    .flower.place-right-bottom {
+        width: 280px;
+        height: 220px;
+    }
+    .map-place {
+        width: 90%;
+        height: 300px;
+    }
     .section h2 {
         font-size: 2em; /* Ukuran font diubah untuk layar kecil */
     }
@@ -118,15 +180,23 @@ body {
     .section h3 {
         font-size: 1.6em; /* Ukuran font diubah untuk layar lebih kecil */
     }
+    .place img[alt="Location and Time"] {
+        max-width: 100%;
+        height: auto;
+    }
 }
 @media (max-width: 480px) {
-    .header {
+    .place img[alt="Location and Time"] {
+        max-width: 90%;
+        height: auto;
+    }
+    .header, .place {
         padding: 20px;
     }
-    .header h1 {
+    .header h1, .place h1 {
         font-size: 2em;
     }
-    .header p {
+    .header p, .place p {
         font-size: 1em;
     }
     .flower {
@@ -143,6 +213,18 @@ body {
     .flower.right-top {
         width: 120px;
         height: 260px;
+    }
+    .flower.place-left-bottom {
+        width: 150px;
+        height: 100px;
+    }
+    .flower.place-right-bottom {
+        width: 150px;
+        height: 100px;
+    }
+    .map-place {
+        width: 100%;
+        height: 250px;
     }
     .section h2 {
         font-size: 1.5em; /* Ukuran font diubah untuk layar lebih kecil */

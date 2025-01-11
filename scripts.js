@@ -3,19 +3,23 @@ document.addEventListener('scroll', function() {
     const place = document.querySelector('.place');
     const dresscode = document.querySelector('.dresscode');
     const itinerary = document.querySelector('.itinerary');
+    const gift = document.querySelector('.gift');
     const sectionPosition = section.getBoundingClientRect().top;
     const placePosition = place.getBoundingClientRect().top;
     const dresscodePosition = dresscode.getBoundingClientRect().top;
     const itineraryPosition = itinerary.getBoundingClientRect().top;
+    const giftPosition = gift.getBoundingClientRect().top;
     const placeHeight = place.getBoundingClientRect().height;
     const dresscodeHeight = dresscode.getBoundingClientRect().height;
     const itineraryHeight = itinerary.getBoundingClientRect().height;
+    const giftHeight = gift.getBoundingClientRect().height;
     const screenPosition = window.innerHeight / 1.3;
     const flowers = document.querySelectorAll('.flower');
     const header = document.querySelector('.header');
     const placeFlowers = place.querySelectorAll('.flower.place-left-bottom, .flower.place-right-bottom');
     const dresscodeFlowers = dresscode.querySelectorAll('.flower.dresscode-left-bottom, .flower.dresscode-right-bottom');
     const itineraryFlowers = itinerary.querySelectorAll('.flower.itinerary-left-bottom, .flower.itinerary-right-bottom, .flower.itinerary-right-top');
+    const giftFlowers = gift.querySelectorAll('.flower.gift-left-bottom, .flower.gift-right-bottom, .flower.gift-left-top');
 
     if (sectionPosition < screenPosition) {
         section.classList.add('visible');
@@ -72,4 +76,28 @@ document.addEventListener('scroll', function() {
         });
         itinerary.style.opacity = '0';
     }
+
+    if (giftPosition < window.innerHeight / 2 && giftPosition > -giftHeight / 2) {
+        giftFlowers.forEach(flower => {
+            flower.style.transition = 'opacity 1s';
+            flower.style.opacity = '1';
+        });
+        gift.style.opacity = '1';
+    } else {
+        giftFlowers.forEach(flower => {
+            flower.style.transition = 'opacity 1s';
+            flower.style.opacity = '0';
+        });
+        gift.style.opacity = '0';
+    }
 });
+
+function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('Account number copied to clipboard: ' + text);
+}

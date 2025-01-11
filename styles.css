@@ -211,6 +211,116 @@ body {
     transition: opacity 1s;
 }
 
+.gift {
+    padding: 50px;
+    color: rgba(140, 115, 87, 255);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 1s;
+}
+
+.gift h7 {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gift p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.bank-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom dengan lebar yang sama */
+    gap: 20px; /* Jarak antara kolom */
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.bank-account {
+    /* border: 2px solid #9a836b; Warna border */
+    border-radius: 10px; /* Border rounded */
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: transparent; /* Menghapus warna latar belakang */
+    color: rgba(140, 115, 87, 255); /* Warna tulisan mengikuti tema */
+    margin-bottom: 20px; /* Menambahkan margin bawah untuk jarak antar kolom */
+}
+
+.bank-account h8 {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.bank-account p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.copy-icon {
+    cursor: pointer;
+    margin-left: 5px; /* Mengurangi jarak antara ikon dan nomor rekening */
+    font-size: 0.8em; /* Mengurangi ukuran ikon */
+    color: rgba(140, 115, 87, 255); /* Warna ikon mengikuti tema */
+    vertical-align: middle; /* Menyelaraskan ikon dengan teks */
+}
+
+.copy-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+.flower.gift-left-bottom {
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    left: 10px;
+    background-image: url('flower-left.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.flower.gift-right-bottom {
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    right: 10px;
+    background-image: url('flower-right.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.flower.gift-left-top {
+    width: 300px;
+    height: 160px;
+    top: 10px;
+    left: 10px;
+    background-image: url('flower-top-left.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .flower {
     position: fixed;
     background-size: cover;
@@ -271,6 +381,23 @@ body {
     margin-top: 20px;
 }
 @media (max-width: 768px) {
+    .gift {
+        padding: 30px;
+    }
+    .gift h7 {
+        font-size: 1.8em;
+    }
+    .gift p {
+        font-size: 1.2em;
+    }
+    .bank-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bank-account {
+        width: 80%;
+        margin-bottom: 20px;
+    }
     .itinerary {
         padding: 30px;
     }
@@ -350,6 +477,30 @@ body {
     }
 }
 @media (max-width: 480px) {
+    .gift {
+        padding: 20px;
+    }
+    .gift h7 {
+        font-size: 2em;
+    }
+    .gift p {
+        font-size: 1em;
+    }
+    .bank-details {
+        grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom pada layar kecil */
+    }
+    .bank-account {
+        width: 100%;
+    }
+    .flower.gift-left-bottom,
+    .flower.gift-right-bottom{
+        width: 150px;
+        height: 100px;
+    }
+    .flower.gift-left-top {
+        width: 175px;
+        height: 95px;
+    }
     .itinerary {
         padding: 20px;
     }

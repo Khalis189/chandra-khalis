@@ -135,3 +135,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+function openInvitation() {
+    const intro = document.getElementById('intro');
+    intro.classList.add('fade-out');
+    setTimeout(() => {
+        intro.style.display = 'none';
+        document.getElementById('invitation').style.display = 'block';
+    }, 1000);
+}

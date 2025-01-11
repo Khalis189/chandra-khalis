@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <div class="header">
         <h1>Hello, our dearly friend!</h1>
@@ -27,21 +30,16 @@
         <img src="location-and-time.png" alt="Location and Time">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.603906937298!2d106.80128187499339!3d-6.571571193421777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c511d34d0667%3A0x431286b1a99f8d15!2sKOTESHU%20BOGOR!5e0!3m2!1sid!2sid!4v1736478723419!5m2!1sid!2sid"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            class="map-place"
-        ></iframe>
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="map-place"></iframe>
         <div class="flower place-left-bottom"></div>
         <div class="flower place-right-bottom"></div>
     </div>
     <div class="dresscode">
         <h5>Dress code for guests</h5>
         <img src="dresscode-image.png" alt="Dress Code">
-        <p>We’re gonna be so delightful if you choose some of our color palette references to wear to the wedding lunch!</p>
+        <p>We’re gonna be so delightful if you choose some of our color palette references to wear to the wedding lunch!
+        </p>
         <p>Casual looks allow for the wedding lunch; you can wear what makes you comfortable!</p>
         <p class="center-text">WE CAN NOT WAIT TO SEE YOUR BEST LOOK!</p>
         <div class="flower dresscode-left-bottom"></div>
@@ -61,7 +59,9 @@
     </div>
     <div class="gift">
         <h7>Wedding gift</h7>
-        <p>Your presence will be the greatest gift for us when we are starting our journey as husband and wife, and we ask for nothing more. Having said that, if you still decide to indulge us, a wishing well has been set up via our bank account. <br> <br> Your generosity is not stipulated, and, yet, well appreciated.</p>
+        <p>Your presence will be the greatest gift for us when we are starting our journey as husband and wife, and we
+            ask for nothing more. Having said that, if you still decide to indulge us, a wishing well has been set up
+            via our bank account. <br> <br> Your generosity is not stipulated, and, yet, well appreciated.</p>
         <div class="bank-details">
             <div class="bank-account">
                 <p>5735372537<span class="copy-icon" onclick="copyToClipboard('5735372537')">📋</span></p>
@@ -76,6 +76,20 @@
         <div class="flower gift-right-bottom"></div>
         <div class="flower gift-left-top"></div>
     </div>
+    <div class="notes">
+        <div class="note-box">
+            <p class="note-text">It would be such an honor if you can attend our wedding luncheon.</p>
+            <p class="note-signature">With love,<br> Chandra & Khalis</p>
+        </div>
+        <div class="flower notes-left-bottom"></div>
+        <div class="flower notes-right-bottom"></div>
+    </div>
+    <button id="playPauseBtn" style="display: none;">Pause Music</button>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <script src="scripts.js"></script>
 </body>
+
 </html>

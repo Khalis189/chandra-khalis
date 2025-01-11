@@ -321,6 +321,72 @@ body {
     transition: opacity 1s;
 }
 
+.notes {
+    padding: 50px;
+    color: rgba(140, 115, 87, 255);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 1s;
+}
+
+.note-box {
+    border: 2px solid rgba(140, 115, 87, 255); /* Warna border sesuai tema */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.note-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2em;
+    margin-bottom: 50px;
+    text-align: start;
+}
+
+.note-signature {
+    font-family: 'Noto Serif Display', serif;
+    font-style: italic;
+    font-size: 1.8em;
+    text-align: start;
+
+}
+
+.flower.notes-left-bottom {
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    left: 10px;
+    background-image: url('flower-left.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.flower.notes-right-bottom {
+    width: 200px;
+    height: 500px;
+    bottom: 10px;
+    right: 10px;
+    background-image: url('last-flower-right.png');
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .flower {
     position: fixed;
     background-size: cover;
@@ -381,6 +447,18 @@ body {
     margin-top: 20px;
 }
 @media (max-width: 768px) {
+    .notes {
+        padding: 30px;
+    }
+    .note-box {
+        width: 90%;
+    }
+    .note-text {
+        font-size: 2em;
+    }
+    .note-signature {
+        font-size: 1.8em;
+    }
     .gift {
         padding: 30px;
     }
@@ -477,6 +555,29 @@ body {
     }
 }
 @media (max-width: 480px) {
+    .notes {
+        padding: 20px;
+    }
+    .note-box {
+        width: 75%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+    .note-text {
+        font-size: 1.5em;
+    }
+    .note-signature {
+        font-size: 1.3em;
+    }
+    .flower.notes-left-bottom {
+        width: 150px;
+        height: 100px;
+    }
+    .flower.notes-right-bottom{
+        width: 100px;
+        height: 260px;
+    }
     .gift {
         padding: 20px;
     }
@@ -640,6 +741,11 @@ body {
     border-radius: 15px;
     margin-top: 10px;
 }
+
+#playPauseBtn {
+    display: none; /* Menyembunyikan tombol play/pause */
+}
+
 @media (max-width: 768px) {
     .section {
         padding: 30px;

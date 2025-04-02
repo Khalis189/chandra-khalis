@@ -13,52 +13,52 @@ function getParameterByName(name, url = window.location.href) {
     return text.replace(/\s+/g, ' ').trim();
   }
   
-  // Kamus terjemahan dengan parafrase yang mudah dimengerti
+  // Kamus terjemahan dengan parafrase sopan untuk undangan bapak/ibu
   const translations = {
     // Intro
     "Welcome to Our Wedding Luncheon Invitation": "Selamat Datang di Undangan Makan Siang Pernikahan Kami",
-    "We are delighted to have you here!": "Kami sangat senang Anda bisa hadir!",
+    "We are delighted to have you here!": "Kami sangat bersyukur dan senang atas kehadiran Bapak/Ibu sekalian!",
     "Open Invitation": "Buka Undangan",
     
     // Header Invitation
-    "Hello, our dearly friend!": "Halo, sahabat tersayang!",
-    "We are happy to announce that we’re going to tie the knot soon!": "Kami dengan gembira mengumumkan bahwa kami akan segera menikah!",
-    "There’s no words can describe how happy we are if you could be a part of our special day!": "Tak ada kata yang bisa menggambarkan betapa bahagianya kami jika Anda bergabung di hari istimewa kami!",
+    "Hello, our dearly friend!": "Assalamualaikum, \n Salam sejahtera, Bapak/Ibu yang kami hormati,",
+    "We are happy to announce that we’re going to tie the knot soon!": "Dengan penuh sukacita, kami mengumumkan bahwa kami akan segera melangsungkan pernikahan.",
+    "There’s no words can describe how happy we are if you could be a part of our special day!": "Tak terungkap betapa bahagianya kami jika Bapak/Ibu berkenan hadir di hari istimewa kami.",
     
     // Section Undangan
-    "Join us": "Bergabunglah Bersama Kami",
-    "FOR THE WEDDING LUNCH OF": "UNTUK MAKAN SIANG PERNIKAHAN",
+    "Join us": "Mari Bergabung Bersama Kami",
+    "FOR THE WEDDING LUNCH OF": "UNTUK ACARA MAKAN SIANG PERNIKAHAN",
     
     // Place
     "Place and date": "Tempat dan Tanggal",
     "Location and Time": "Lokasi dan Waktu",
     
     // Dresscode
-    "Dress code for guests": "Pakaian yang dikenakan tamu",
+    "Dress code for guests": "Pakaian untuk Tamu Undangan",
     "ANY KIND OF NEUTRAL PALETTE": "WARNA NETRAL APAPUN",
     "We’re gonna be so delightful if you choose some of our color palette references to wear to the wedding lunch!":
-      "Kami akan sangat bahagia jika Anda memakai salah satu pilihan warna dari palet kami untuk acara makan siang pernikahan!",
+      "Kami akan sangat berterima kasih jika Bapak/Ibu memilih salah satu warna dari palet yang kami sarankan untuk acara makan siang pernikahan.",
     "Casual looks allow for the wedding lunch; you can wear what makes you comfortable!":
-      "Acara makan siang pernikahan ini santai, jadi pakailah yang membuat Anda nyaman!",
-    "WE CAN NOT WAIT TO SEE YOUR BEST LOOK!": "Kami tak sabar melihat penampilan terbaik Anda!",
+      "Acara ini bersifat santai, silakan mengenakan pakaian yang membuat Bapak/Ibu nyaman.",
+    "WE CAN NOT WAIT TO SEE YOUR BEST LOOK!": "Kami sangat menantikan penampilan terbaik Bapak/Ibu!",
     
     // Itinerary
     "Itinerary": "Jadwal Acara",
     "11.00 - Entrance": "11.00 - Masuk",
     "11.05 - Welcome Speech": "11.05 - Sambutan",
     "11.10 - Blessing": "11.10 - Doa Restu",
-    "11.15 - Lunch & Mingling": "11.15 - Makan Siang & Berbincang",
-    "12.30 - Bouquet toss & Mingling": "12.30 - Lempar Bunga & Berbincang",
-    "13.00 - End of Ceremony": "13.00 - Selesai Acara",
+    "11.15 - Lunch & Mingling": "11.15 - Makan Siang & Ramah Tamah",
+    "12.30 - Bouquet toss & Mingling": "12.30 - Lempar Bunga & Ramah Tamah",
+    "13.00 - End of Ceremony": "13.00 - Acara Selesai",
     
     // Gift
     "Wedding gift": "Hadiah Pernikahan",
     "Your presence will be the greatest gift for us when we are starting our journey as husband and wife, and we ask for nothing more. Having said that, if you still decide to indulge us, a wishing well has been set up via our bank account. Your generosity is not stipulated, and, yet, well appreciated.":
-      "Kehadiran Anda adalah hadiah terbaik bagi kami saat memulai perjalanan sebagai suami istri, dan itu sudah cukup. Namun, jika Anda tetap ingin memberi sesuatu, kami telah menyiapkan rekening bank sebagai 'wishing well'. \n \n Setiap bentuk kebaikan sangat kami hargai.",
+      "Kehadiran Bapak/Ibu adalah hadiah terindah bagi kami saat memulai perjalanan sebagai pasangan suami istri. Jika Bapak/Ibu berkenan memberikan hadiah, kami telah menyediakan rekening bank sebagai 'wishing well'. \n \n Segala bentuk kebaikan sangat kami hargai.",
     
     // Notes
-    "It would be such an honor if you can attend our wedding luncheon.": "Merupakan kehormatan besar jika Anda dapat menghadiri makan siang pernikahan kami.",
-    "With love,": "Dengan kasih sayang,"
+    "It would be such an honor if you can attend our wedding luncheon.": "Merupakan kehormatan bagi kami jika Bapak/Ibu berkenan menghadiri acara makan siang pernikahan ini.",
+    "With love,": "Dengan hormat,"
   };
   
   // Fungsi untuk mengganti teks elemen berdasarkan selector dengan mencocokkan teks yang sudah dinormalisasi

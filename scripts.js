@@ -8,7 +8,7 @@ function getParameterByName(name, url = window.location.href) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
   }
   
-  // Fungsi untuk menormalkan teks: menghapus spasi berlebih dan line break
+  // Fungsi untuk menormalkan teks: menggabungkan spasi dan menghilangkan baris baru
   function normalizeText(text) {
     return text.replace(/\s+/g, ' ').trim();
   }
@@ -79,6 +79,10 @@ function getParameterByName(name, url = window.location.href) {
   // Fungsi untuk mengganti nilai atribut alt pada elemen gambar
   function translateAltAttributes() {
     document.querySelectorAll('[alt]').forEach(elem => {
+      // Jika elemen adalah gambar dengan src "location-and-time.png", jangan ubah alt-nya
+      if (elem.tagName.toLowerCase() === 'img' && elem.getAttribute('src') === 'location-and-time.png') {
+        return;
+      }
       const altText = elem.alt;
       const normalizedAlt = normalizeText(altText);
       for (const key in translations) {
@@ -125,7 +129,7 @@ function getParameterByName(name, url = window.location.href) {
     translateElements('.notes .note-text');
     translateElements('.notes .note-signature');
     
-    // Terjemahkan juga atribut alt (misalnya pada gambar)
+    // Terjemahkan juga atribut alt (kecuali untuk gambar yang dikecualikan)
     translateAltAttributes();
   }
   

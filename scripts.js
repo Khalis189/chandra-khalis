@@ -138,6 +138,8 @@ function getParameterByName(name, url = window.location.href) {
     const lang = getParameterByName('lang');
     if (lang && lang.toLowerCase() === 'id') {
       applyTranslations();
+      document.querySelector('.itinerary').style.display = 'none';
+      document.querySelector('.place img').src = 'location-and-time-id.png';
     }
   });
   

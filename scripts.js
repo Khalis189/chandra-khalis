@@ -26,7 +26,7 @@ function getParameterByName(name, url = window.location.href) {
     "There’s no words can describe how happy we are if you could be a part of our special day!": "Tak terungkap betapa bahagianya kami jika Bapak/Ibu berkenan hadir di hari istimewa kami.",
     
     // Section Undangan
-    "Join us": "Mari Bergabung Bersama Kami",
+    // "Join us": "Mari Bergabung Bersama Kami",
     "FOR THE WEDDING LUNCH OF": "UNTUK ACARA MAKAN SIANG PERNIKAHAN",
     
     // Place
